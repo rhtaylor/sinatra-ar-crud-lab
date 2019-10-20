@@ -44,7 +44,7 @@ class ApplicationController < Sinatra::Base
     old_article.update(new_params)
     redirect "/articles/#{id}"
   end 
-  post "/articles/:id/delete" do 
+  post "/articles/:id" do 
     
     Article.find(params[:id]).destroy
     redirect '/index'
